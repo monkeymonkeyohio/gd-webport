@@ -177,7 +177,6 @@
 
   async function fetchChunkWithRetry(url, retries = 3) {
 
-    url = "https://cdn.jsdelivr.net/gh/AlexBoops/geo@main/" + url.split('/').pop();
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
         let res = await window.nativeFetch(url);
